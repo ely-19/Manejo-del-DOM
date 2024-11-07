@@ -1,0 +1,148 @@
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  background-color:pink;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+#taskContainer {
+  width: 90%;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color:#F5989E;
+  border-radius: 8px;
+  box-shadow: 0 0 10px black;
+}
+
+
+h1 {
+  text-align: center;
+  color: #F5107B;
+}
+
+.inputContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+#newItemInput {
+  width: 80%;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#addItemBtn {
+  padding: 8px 16px;
+  background-color:#FA12A1;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#addItemBtn:hover {
+  background-color: #FA12A1;
+}
+
+
+#cuenta-tareas, #cuenta-tareas-realizadas {
+  margin: 10px 0;
+  font-size: 16px;
+  color:black;
+}
+
+
+#encabezados {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #ddd;
+  margin-bottom: 10px;
+}
+
+#encabezados span {
+  flex: 1;
+  text-align: center;
+}
+
+#itemsList {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#itemsList li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+
+#itemId {
+  font-size: 14px;
+  color:black;
+  margin-right: 10px;
+  width: 40px;
+  text-align: center;
+}
+
+#itemText {
+  font-size: 16px;
+  flex-grow: 1; 
+}
+
+
+button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button.completeBtn {
+  background-color: #EC859F;
+  color: white;
+}
+
+button.deleteBtn {
+  background-color:#EC859F;
+  color: white;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+
+.completed {
+  text-decoration: line-through;
+  color:black;
+}
+
+
+.material-icons {
+  font-size: 24px;
+  color: black;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.material-icons:hover {
+  color: #FF5722;
+}
