@@ -10,15 +10,14 @@ document.addEventListener("DOMContentLoaded", () => {
   let itemIdCounter = 0;
   let totalTareas = 0;
   let tareasRealizadas = 0;
-  let items = []; // Array para almacenar todos los productos agregados
+  let items = []; 
 
-  // Función para actualizar el contador de tareas
+ 
   function updateTareasCount() {
     cuentaTareas.textContent = `Total productos: ${totalTareas}`;
     cuentaTareasRealizadas.textContent = `Productos listos: ${tareasRealizadas}`;
   }
 
-  // Función para crear un nuevo producto
   function createItem(itemText) {
     const itemId = itemIdCounter;
     itemIdCounter++;
@@ -32,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const span = document.createElement('span');
     span.textContent = itemText;
 
-    // Botón de completar con ícono de "check_circle"
+    
     const completeBtn = document.createElement('button');
     completeBtn.className = 'completeBtn';
     completeBtn.innerHTML = '<span class="material-icons">check_circle</span>';
@@ -46,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
       updateTareasCount();
     });
 
-    // Botón de eliminar con ícono de "delete"
+  
     const deleteBtn = document.createElement('button');
     deleteBtn.className = 'deleteBtn';
     deleteBtn.innerHTML = '<span class="material-icons">delete</span>';
@@ -57,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
         tareasRealizadas--;
       }
       updateTareasCount();
-      items = items.filter(item => item.id !== itemId); // Remover de la lista interna
+      items = items.filter(item => item.id !== itemId); 
     });
 
     li.appendChild(itemIdSpan);
@@ -65,10 +64,10 @@ document.addEventListener("DOMContentLoaded", () => {
     li.appendChild(completeBtn);
     li.appendChild(deleteBtn);
 
-    // Añadir el nuevo item a la lista interna de items
+    
     items.push({ id: itemId, element: li });
 
-    // Mostrar solo los primeros 4 productos
+   
     if (items.length > 4) {
       li.classList.add('hidden');
     }
@@ -77,41 +76,41 @@ document.addEventListener("DOMContentLoaded", () => {
     updateTareasCount();
   }
 
-  // Evento de clic en el botón "Añadir producto"
+
   addItemBtn.addEventListener('click', () => {
     const itemText = newItemInput.value.trim();
     if (itemText) {
       createItem(itemText);
-      newItemInput.value = ''; // Limpiar el campo de entrada
+      newItemInput.value = ''; a
     }
   });
 
-  // Evento para añadir un producto al presionar "Enter"
+
   newItemInput.addEventListener('keypress', (e) => {
     if (e.key === 'Enter') {
       const itemText = newItemInput.value.trim();
       if (itemText) {
         createItem(itemText);
-        newItemInput.value = ''; // Limpiar el campo de entrada
+        newItemInput.value = ''; 
       }
     }
   });
 
-  // Evento para mostrar todos los productos
+ 
   showAllBtn.addEventListener('click', () => {
     items.forEach(item => {
-      item.element.classList.remove('hidden'); // Mostrar todos los productos
+      item.element.classList.remove('hidden'); 
     });
-    showAllBtn.style.display = 'none'; // Ocultar el botón "Mostrar todos"
-    hideAllBtn.style.display = 'inline-block'; // Mostrar el botón "Ocultar productos"
+    showAllBtn.style.display = 'none'; 
+    hideAllBtn.style.display = 'inline-block'; 
   });
 
-  // Evento para ocultar productos y mostrar el botón "Mostrar todos"
+  
   hideAllBtn.addEventListener('click', () => {
     items.slice(4).forEach(item => {
-      item.element.classList.add('hidden'); // Ocultar productos adicionales
+      item.element.classList.add('hidden'); 
     });
-    hideAllBtn.style.display = 'none'; // Ocultar el botón "Ocultar productos"
-    showAllBtn.style.display = 'inline-block'; // Mostrar el botón "Mostrar todos"
+    hideAllBtn.style.display = 'none'; 
+    showAllBtn.style.display = 'inline-block'; 
   });
 });

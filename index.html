@@ -1,43 +1,44 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gestión de Productos</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Productos</title>
+    <link rel="stylesheet" href="assets/css/style.css">
 
-  <!-- Carga de Material Icons -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
+
 <body>
-  <div id="taskContainer">
-    <h1>Gestión de Productos</h1>
+    <div id="taskContainer">
+        <h1>Gestión de Productos</h1>
 
-    <!-- Contenedor para el campo de entrada y el botón -->
-    <div class="inputContainer">
-      <input type="text" id="newItemInput" placeholder="Añadir un nuevo producto">
-      <button id="addItemBtn">Añadir</button>
+
+        <div class="inputContainer">
+            <input type="text" id="newItemInput" placeholder="Añadir un nuevo producto">
+            <button id="addItemBtn">Añadir</button>
+        </div>
+
+
+        <div id="cuenta-tareas"></div>
+        <div id="cuenta-tareas-realizadas"></div>
+
+
+        <div id="encabezados">
+            <span>ID</span>
+            <span>Producto</span>
+            <span>Acciones</span>
+        </div>
+        <ul id="itemsList"></ul>
+
+        <button id="showAllBtn">Mostrar todos los productos</button>
+
+
+        <button id="hideAllBtn" style="display: none;">Ocultar productos</button>
     </div>
 
-    <!-- Contadores de productos -->
-    <div id="cuenta-tareas"></div>
-    <div id="cuenta-tareas-realizadas"></div>
-
-    <!-- Lista de productos -->
-    <div id="encabezados">
-      <span>ID</span>
-      <span>Producto</span>
-      <span>Acciones</span>
-    </div>
-    <ul id="itemsList"></ul>
-
-    <!-- Botón para mostrar todos los productos -->
-    <button id="showAllBtn">Mostrar todos los productos</button>
-
-    <!-- Botón para ocultar productos -->
-    <button id="hideAllBtn" style="display: none;">Ocultar productos</button>
-  </div>
-
-  <script src="assets/js/script.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
+
 </html>
